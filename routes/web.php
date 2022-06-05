@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', 'HomeController@index');
-Route::get('test', 'HomeController@test');
-Route::get('page/{slug}', 'PageController@show');
-Route::get('test2', 'Test\TestController@index');
-
-Route::resource('posts', 'PostController');
+Route::get('', 'HomeController@index')->name('home');
+// Route::get('test', 'HomeController@test');
+// Route::get('page/{slug}', 'PageController@show');
+// Route::get('test2', 'Test\TestController@index');
+// Route::resource('posts', 'PostController');
+// Route::get('pages/clients','PageController@show')->name('page.clients');
+Route::get('pages/clients','PageController@show')->name('clients');
 
 
 
